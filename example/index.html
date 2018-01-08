@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个示例</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../dist/logs_client.js"></script>
+</head>
+<body>
+<form class="form">
+    <h3 class="title">插入一条数据进入队列</h3>
+    <input id="tableInput" class="dInput" type="text" placeholder="表名" value="logs_table">
+    <input id="dataInput" class="dInput" type="text" placeholder="json 数据" value='{"app":"app","name":"name"}'>
+</form>
+
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+  window.LogsClient.url = 'http://127.0.0.1:3000/logs';
+  window.LogsClient.limit = 100;
+  window.LogsClient.delay = 0;
+
+  $(function () {
+    var $window = $(window);
+    var $tableInput = $('#tableInput');
+    var $dataInput = $('#dataInput');
+
+    $window.keydown(function (event) {
+      if (event.which === 13) {
+        window.LogsClient.queue.enqueue({
+          table: $tableInput.val().trim(),
+          data: $dataInput.val().trim()
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>
