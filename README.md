@@ -8,7 +8,7 @@
 
 * 浏览器环境,引入脚本 `logs_client.js`
 ```html
-<script src="../dist/logs_client.js"></script>
+<script src="logs_client.js"></script>
 ```
 
 * node 环境
