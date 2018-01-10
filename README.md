@@ -11,8 +11,12 @@
 <script src="logs_client.js"></script>
 ```
 
-* node 环境
+* node 环境,包安装
 
+
+```sh
+npm install @gavin66/logs_client
+```
 
 
 
@@ -36,4 +40,20 @@ window.LogsClient.queue.enqueue({
 * node 环境
 
 
+```javascript
+const LogsClient = require('@gavin66/logs_client')
+
+// 日志系统服务地址,必填
+LogsClient.url = 'http://127.0.0.1:3000/test'
+// 并发数量
+LogsClient.concurrency = 1
+// 初始化队列
+const queue = LogsClient.queue()
+
+// 入队
+queue.push({
+  table: 'logs_table',
+  data: '{"a":"b","c":"d"}'
+})
+```
 
