@@ -1,6 +1,6 @@
 {
   "name": "@gavin66/logs_client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "日志系统 [gavin66/logs](https://github.com/gavin66/logs) 的客户端程序",
   "main": "node/logs_client.js",
   "scripts": {
