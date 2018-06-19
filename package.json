@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/gavin66/logs_client#readme",
   "dependencies": {
-    "async": "^2.6.0",
-    "request": "^2.83.0"
+    "async": "^2.6.1",
+    "request": "^2.87.0"
   }
 }
